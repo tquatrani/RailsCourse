@@ -4,5 +4,5 @@ class Post < ActiveRecord::Base
 	has_many :memberships
 	has_many :categories, through: :memberships
 
-
+	validates :title, :description, :url, presence: true
 end

@@ -1,0 +1,8 @@
+<h3> Showing Category <h3>
+
+<% @category.posts.each do |post|%>
+	<div class='row'>
+		<%= render post.categories %>
+		<h4> <%= link_to post.title, post.url %><h4>
+	</div>
+<% end %>
